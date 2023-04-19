@@ -5,7 +5,7 @@ import axios from "axios"
 export const AgentsApi = {
     getAllAgents: async () => {
         try {
-            return await axios.get('http://localhost:3000/agents');
+            return await axios.get('https://flow-server-ruby.vercel.app/agents');
 
         } catch (error) {
             console.error(error)
@@ -14,7 +14,7 @@ export const AgentsApi = {
 
     getAgentById: async (id: string | undefined) => {
         try {
-            return await axios.get(`http://localhost:3000/agents/${id}`);
+            return await axios.get(`https://flow-server-ruby.vercel.app/agents/${id}`);
         } catch (error) {
             console.error(error)
         }
